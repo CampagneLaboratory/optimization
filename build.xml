@@ -45,9 +45,7 @@
                 <attribute name="Implementation-Vendor"
                            value="Institute for Computational Biomedicine (ICB), Weill Medical College of Cornell University"/>
             </manifest>
-            <fileset dir="${classes}">
-                <include name="edu/cornell/med/icb/optimization/**"/>
-            </fileset>
+            <fileset dir="${classes}"/>
         </jar>
     </target>
 
@@ -60,12 +58,13 @@
                  sourcepath="${src}" destdir="${javadocs}" encoding="UTF-8"
                  author="true" version="true" windowtitle="Optimization API ${label} (${buildstamp})"
                  header="Optimization API ${label} (${buildstamp})">
-            <link href="http://java.sun.com/j2se/1.5/docs/api/"/>
+            <link href="http://java.sun.com/javase/6/docs/api/"/>
+            <link href="http://dsiutils.dsi.unimi.it/docs/"/>
             <link href="http://fastutil.dsi.unimi.it/docs/"/>
-            <link href="http://mg4j.dsi.unimi.it/docs/"/>
             <link href="http://logging.apache.org/log4j/1.2/apidocs/"/>
             <link href="http://icbtools.med.cornell.edu/javadocs/icb-utils/"/>
             <link href="http://jgap.sourceforge.net/javadoc/3.3.2/"/>
+            <link href="http://dsd.lbl.gov/~hoschek/colt/api/"/>
             <classpath>
                 <path refid="compile.classpath"/>
                 <pathelement location="${classes}"/>

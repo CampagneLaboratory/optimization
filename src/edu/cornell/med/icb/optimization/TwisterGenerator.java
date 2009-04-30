@@ -35,14 +35,15 @@ public class TwisterGenerator extends MersenneTwister implements RandomGenerator
     }
 
     public TwisterGenerator() {
+        super();
     }
 
     public TwisterGenerator(final int seed) {
         super(seed);
     }
 
-    public int nextInt(final int a_ceiling) {
-        return (int) Math.round(this.nextDouble() * (a_ceiling-1)) ;
+    public int nextInt(final int ceiling) {
+        return (int) Math.round(nextDouble() * (ceiling - 1));
     }
 
     public boolean nextBoolean() {
