@@ -23,6 +23,7 @@ import it.unimi.dsi.fastutil.doubles.DoubleList;
 import it.unimi.dsi.fastutil.ints.IntArraySet;
 import it.unimi.dsi.fastutil.ints.IntSet;
 import it.unimi.dsi.logging.ProgressLogger;
+import org.apache.commons.lang.ArrayUtils;
 import org.apache.log4j.Logger;
 import org.jgap.Chromosome;
 import org.jgap.Configuration;
@@ -243,7 +244,7 @@ public class OptimizeSubSet {
                         "or raw: " + fitness);
                 log.debug(fitestChromosome.getGene(0).toString());
             }
-            if (fitness>= previousFitness && fitness - previousFitness < Math.abs(convergenceDelta)) {
+            if (fitness >= previousFitness && fitness - previousFitness < Math.abs(convergenceDelta)) {
                 timesFitnessStable++;
                 log.trace("fitness function value stable " + timesFitnessStable);
             } else {
@@ -281,7 +282,7 @@ public class OptimizeSubSet {
     private void convertFittestToSolution(final IChromosome fittestChromosome) {
         if (fittestChromosome == null) {
             fitestSubset = null;
-            fitestParams = new double[0];
+            fitestParams = ArrayUtils.EMPTY_DOUBLE_ARRAY;
         } else {
             fitestSubset = ((SubsetSuperGene) fittestChromosome.getGene(0)).getSubSet();
             fitestParams = FitnessFunctionAdapter.getParameterValues(fittestChromosome, allPossibleParameterValues);
