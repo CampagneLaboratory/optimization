@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2007-2009 Institute for Computational Biomedicine,
+ * Copyright (C) 2007-2010 Institute for Computational Biomedicine,
  *                         Weill Medical College of Cornell University
  *
  *  This program is free software; you can redistribute it and/or modify
@@ -57,7 +57,7 @@ public class OptimizeSubSet {
     final int numElementsInSet;
     IChromosome subsetChromosome;
     int numParams;
-    private static int DEFAULT_POPULATION_SIZE = 1000;
+    private static final int DEFAULT_POPULATION_SIZE = 1000;
     private Configuration configuration;
     private int numberOfIterationsPerformed;
     RandomGenerator randomGenerator;

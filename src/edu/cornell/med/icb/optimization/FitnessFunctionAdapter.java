@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2007-2009 Institute for Computational Biomedicine,
+ * Copyright (C) 2007-2010 Institute for Computational Biomedicine,
  *                         Weill Medical College of Cornell University
  *
  *  This program is free software; you can redistribute it and/or modify
@@ -29,10 +29,10 @@ import org.jgap.impl.IntegerGene;
  *         Time: 1:33:20 PM
  */
 public class FitnessFunctionAdapter extends FitnessFunction {
-    private int k;
-    private IntSet set;
+    private final int k;
+    private final IntSet set;
     SubSetFitnessFunction delegate;
-    private double[][] paramValues;
+    private final double[][] paramValues;
 
     public FitnessFunctionAdapter(final IntSet set, final int k, final SubSetFitnessFunction convergenceCriterion, final double[][] paramValues) {
         this.k = k;

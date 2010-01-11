@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2008-2009 Institute for Computational Biomedicine,
+ * Copyright (C) 2008-2010 Institute for Computational Biomedicine,
  *                         Weill Medical College of Cornell University
  *
  *  This program is free software; you can redistribute it and/or modify
@@ -33,7 +33,7 @@ import java.util.Iterator;
  *         Time: 4:44:49 PM
  */
 public class BulkFitnessNoOffset extends BulkFitnessFunction {
-    private FitnessFunction fitnessFunction;
+    private final FitnessFunction fitnessFunction;
 
     public BulkFitnessNoOffset(final FitnessFunction fitnessFunction) {
         this.fitnessFunction = fitnessFunction;
